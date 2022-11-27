@@ -192,7 +192,7 @@ def main():
         while True:
             try:
                 ret, frame = frame_queue.get_nowait()
-            except queue.Empty:
+            except Exception: # DOING EXCEPT QUEUE DID NOT WORK - MAIN EDIT!
                 break
 
         if(not ret):
